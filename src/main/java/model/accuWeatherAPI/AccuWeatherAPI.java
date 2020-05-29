@@ -2,9 +2,9 @@ package model.accuWeatherAPI;
 
 import java.util.*;
 
-public final class AccuWeatherAPI {
+public interface AccuWeatherAPI {
 
-    public final List<Map<String, Object>> getWeather(String ciudad) {
+    public default List<Map<String, Object>> getWeather(String ciudad) {
 		return Arrays.asList(new HashMap<String, Object>(){{
 			put("DateTime", "2019-05-03T01:00:00-03:00");
 			put("EpochDateTime", 1556856000);

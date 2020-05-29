@@ -1,8 +1,9 @@
 package model.uniformes;
 
 import model.Prenda;
+import model.Atuendo;
 
-public class Uniforme {
+public class Uniforme extends Atuendo {
 	private Prenda parteSuperior;
 	private Prenda parteInferior;
 	private Prenda calzado;

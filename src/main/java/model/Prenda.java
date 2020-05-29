@@ -14,6 +14,10 @@ public class Prenda {
         this.colorSecundario = colorSecundario;
         this.trama = trama;
     }
+    
+    public TipoPrenda getTipoPrenda() {
+    	return this.tipoPrenda;
+    }
 
     public Categoria getCategoria() {
         return this.tipoPrenda.getCategoria();
