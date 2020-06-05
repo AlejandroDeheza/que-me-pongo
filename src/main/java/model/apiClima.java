@@ -13,7 +13,7 @@ public class apiClima implements AccuWeatherAPI{
 	private apiClima() {
 	}
 
-	static apiClima instance() {
+	public static apiClima instance() {
 		return INSTANCE;
 	}
 	
