@@ -8,7 +8,7 @@ public class Usuario {
 	private List<Guardarropa> guardarropas = new ArrayList<Guardarropa>();
 	private List<Propuesta> propuestas = new ArrayList<Propuesta>();
 	
-	public void compartirGuardarropa(Guardarropa guardarropa){
+	public void compartirGuardarropa(Guardarropa guardarropa){ //para recibir un guardarropa que me estan compartiendo
 		this.guardarropas.add(guardarropa);
 	}
 	
@@ -16,13 +16,6 @@ public class Usuario {
 		return this.guardarropas.get(indice);
 	}
 	
-	public void propuestaAgregarPrenda(Prenda prenda){
-		this.propuestaAgregarPrenda.add(prenda);
-	}
-	
-	public void propuestaEliminarPrenda(Prenda prenda){
-		this.propuestaEliminarPrenda.add(prenda);
-	}
 	
 	//para el ultimo requerimiento quiza podria utilizar el patron Memento..
 
