@@ -6,6 +6,9 @@ public class Prenda {
     private Color colorPrimario;
     private Color colorSecundario;
 	private Trama trama;
+	
+	private int temperaturaMaxima; // hay que ingresar esto a la clase de alguna forma
+	//en el builder quizas
 
     public Prenda(TipoPrenda tipoPrenda, Material material, Color colorPrimario, Color colorSecundario, Trama trama) {
         this.tipoPrenda = tipoPrenda;
@@ -18,4 +21,8 @@ public class Prenda {
     public Categoria getCategoria() {
         return this.tipoPrenda.getCategoria();
     }
+
+	public boolean aptaParaTemperatura(int temperatura) {
+		return temperaturaMaxima >= temperatura;
+	}
 }
