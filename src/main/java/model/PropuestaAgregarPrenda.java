@@ -3,17 +3,19 @@ package model;
 public class PropuestaAgregarPrenda implements Propuesta{
 	
 	private Prenda prenda;
+	private Guardarropa guardarropa;
 	
-	public PropuestaAgregarPrenda(Prenda prenda) {
+	public PropuestaAgregarPrenda(Prenda prenda, Guardarropa guardarropa) {
 		this.prenda = prenda;
+		this.guardarropa = guardarropa;
 	}
 	
-	public void aplicarEn(Guardarropa guardarropa) {
-		guardarropa.agregarPrenda(prenda);
+	public void aplicar() {
+		this.guardarropa.agregarPrenda(prenda);
 	}
 	
-	public void deshacer(Guardarropa guardarropa) {
-		guardarropa.eliminarPrenda(prenda);
+	public void deshacer() {
+		this.guardarropa.eliminarPrenda(prenda);
 	}
 
 }

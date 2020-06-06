@@ -7,16 +7,35 @@ public class Usuario {
 	private Borrador borradorActual;
 	private List<Guardarropa> guardarropas = new ArrayList<Guardarropa>();
 	private List<Propuesta> propuestas = new ArrayList<Propuesta>();
+	private List<Propuesta> propuestasAceptadas = new ArrayList<Propuesta>();
 	
-	public void compartirGuardarropa(Guardarropa guardarropa){ //para recibir un guardarropa que me estan compartiendo
+	public void compartirGuardarropa(Guardarropa guardarropa){ 
 		this.guardarropas.add(guardarropa);
+	}//para recibir un guardarropa que me estan compartiendo
+	
+	public void aceptarTodasLasPropuestas() {
+		this.propuestas.stream().forEach(propuesta -> propuesta.aplicar());
+		this.propuestasAceptadas = propuestas;
+		this.propuestas.clear();
 	}
 	
-	private Guardarropa elegirGuardarropa(int indice) { // es para que el mismo usuario pueda elegir que guardarropa compartir..
-		return this.guardarropas.get(indice);
+	public void rechazarTodasLasPropuestas() {
+		this.propuestas.clear();
 	}
 	
+	public void deshacerPropuestasAceptadas() {
+		this.propuestasAceptadas.stream().forEach(propuesta -> propuesta.deshacer());
+		this.propuestasAceptadas.clear();
+	}
 	
-	//para el ultimo requerimiento quiza podria utilizar el patron Memento..
+	public void aceptarUnaPropuesta(Propuesta propuesta) {
+		propuesta.aplicar();
+	}//capaz no es necesario
+	
+	public void rechazarUnaPropuesta(Propuesta propuesta) {
+		propuesta.deshacer();
+	}//capaz no es necesario
+	
+	
 
 }

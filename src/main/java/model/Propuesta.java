@@ -2,5 +2,6 @@ package model;
 
 public interface Propuesta {
 	
-	public void aplicarEn(Guardarropa guardarropa);
+	public void aplicar();
+	public void deshacer();
 }
