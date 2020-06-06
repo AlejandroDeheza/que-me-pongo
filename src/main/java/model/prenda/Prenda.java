@@ -1,4 +1,4 @@
-package model;
+package model.prenda;
 
 public class Prenda {
     private TipoPrenda tipoPrenda;

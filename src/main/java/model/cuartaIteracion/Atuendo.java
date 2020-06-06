@@ -1,4 +1,6 @@
-package model;
+package model.cuartaIteracion;
+
+import model.prenda.Prenda;
 
 public class Atuendo {
 

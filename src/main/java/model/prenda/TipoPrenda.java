@@ -1,4 +1,4 @@
-package model;
+package model.prenda;
 
 public enum TipoPrenda {
     ZAPATO(Categoria.CALZADO),

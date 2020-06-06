@@ -1,4 +1,6 @@
-package model;
+package model.quintaIteracion;
+
+import model.prenda.Prenda;
 
 public class PropuestaAgregarPrenda implements Propuesta{
 	

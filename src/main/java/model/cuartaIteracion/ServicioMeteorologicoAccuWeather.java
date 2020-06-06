@@ -1,4 +1,4 @@
-package model;
+package model.cuartaIteracion;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

@@ -1,11 +1,11 @@
 package unit.model;
 
-import model.Borrador;
-import model.Color;
-import model.Material;
-import model.Prenda;
-import model.TipoPrenda;
-import model.Trama;
+import model.prenda.Borrador;
+import model.prenda.Color;
+import model.prenda.Material;
+import model.prenda.Prenda;
+import model.prenda.TipoPrenda;
+import model.prenda.Trama;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

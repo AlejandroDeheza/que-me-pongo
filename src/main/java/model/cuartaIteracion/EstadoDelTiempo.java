@@ -1,4 +1,4 @@
-package model;
+package model.cuartaIteracion;
 
 public class EstadoDelTiempo {
 	

@@ -1,4 +1,5 @@
-package model;
+package model.quintaIteracion;
+import model.prenda.Prenda;
 
 public class PropuestaEliminarPrenda implements Propuesta{
 	

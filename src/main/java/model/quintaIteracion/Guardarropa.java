@@ -1,15 +1,17 @@
-package model;
+package model.quintaIteracion;
 
 import java.util.ArrayList;
+
 import java.util.List;
+
+import model.cuartaIteracion.Atuendo;
+import model.prenda.Prenda;
 
 public class Guardarropa {
 	
-	private String criterioDeUsuario;
 	private List<Prenda> prendas = new ArrayList<Prenda>();
 	
-	public Guardarropa(String criterioDeUsuario) {
-		this.criterioDeUsuario = criterioDeUsuario;
+	public Guardarropa() {
 	}
 	
 	public void agregarPrenda(Prenda prenda) {

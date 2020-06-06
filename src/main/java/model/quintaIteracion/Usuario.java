@@ -1,10 +1,9 @@
-package model;
+package model.quintaIteracion;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario {
-	private Borrador borradorActual;
 	private List<Guardarropa> guardarropas = new ArrayList<Guardarropa>();
 	private List<Propuesta> propuestas = new ArrayList<Propuesta>();
 	private List<Propuesta> propuestasAceptadas = new ArrayList<Propuesta>();
@@ -23,19 +22,24 @@ public class Usuario {
 		this.propuestas.clear();
 	}
 	
-	public void deshacerPropuestasAceptadas() {
+	public void deshacerTodasLasPropuestasAceptadas() {
 		this.propuestasAceptadas.stream().forEach(propuesta -> propuesta.deshacer());
 		this.propuestasAceptadas.clear();
 	}
 	
+	public void deshacerUnaPropuesta(Propuesta propuesta) {
+		propuesta.deshacer();
+		this.propuestasAceptadas.remove(propuesta);
+	}
+	
 	public void aceptarUnaPropuesta(Propuesta propuesta) {
 		propuesta.aplicar();
-	}//capaz no es necesario
+		this.propuestasAceptadas.add(propuesta);
+		this.propuestas.remove(propuesta);
+	}
 	
 	public void rechazarUnaPropuesta(Propuesta propuesta) {
-		propuesta.deshacer();
-	}//capaz no es necesario
-	
-	
+		this.propuestas.remove(propuesta);
+	}
 
 }

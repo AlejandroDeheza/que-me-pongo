@@ -1,4 +1,4 @@
-package model;
+package model.quintaIteracion;
 
 public interface Propuesta {
 	
